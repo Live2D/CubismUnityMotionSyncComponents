@@ -1,0 +1,14 @@
+*
+!*/
+!/[Aa]ssets/Live2D.meta
+!/[Aa]ssets/Live2D/CubismMotionSyncPlugin.meta
+!/[Aa]ssets/Live2D/CubismMotionSyncPlugin/**/*
+/[Aa]ssets/Live2D/CubismMotionSyncPlugin/Plugins/**/*.a
+/[Aa]ssets/Live2D/CubismMotionSyncPlugin/Plugins/**/*.bc
+/[Aa]ssets/Live2D/CubismMotionSyncPlugin/Plugins/**/*.dll
+/[Aa]ssets/Live2D/CubismMotionSyncPlugin/Plugins/**/*.so
+/[Aa]ssets/Live2D/CubismMotionSyncPlugin/Plugins/**/*.bundle
+!/.gitattributes
+!/.editorconfig
+!/.gitignore
+!/*.md
