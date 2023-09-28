@@ -30,20 +30,22 @@ SDKパッケージのダウンロードページをお探しの場合は、[ダ�
 
 モーションシンク機能を提供するライブラリです。当リポジトリにはLive2D Cubism MotionSync Coreは同梱されていません。
 
-Live2D Cubism MotionSync Coreを同梱したプラグインパッケージをダウンロードするには[こちら](https://docs.live2d.com/cubism-sdk-manual/download-sdk-motionsync-plugin/)のページを参照ください。
+Live2D Cubism MotionSync Coreを同梱したプラグインパッケージをダウンロードするには[こちら](https://www.live2d.com/sdk/download/motionsync/)のページを参照ください。
 
 ## 開発環境
 
 | Unity | バージョン |
 | --- | --- |
-| LTS | 2022.3.6f1 |
-| LTS | 2021.3.29f1 |
-| LTS | 2020.3.48f1 |
+| Latest | 2023.1.14f1 |
+| LTS | 2022.3.10f1 |
+| LTS | 2021.3.30f1 |
 
 | ライブラリ / ツール | バージョン |
 | --- | --- |
-| Visual Studio 2022 | 17.7.0 |
+| Android SDK / NDK | *1 |
+| Visual Studio 2022 | 17.7.4 |
 | Windows SDK | 10.0.22621.0 |
+| Xcode | 14.3.1 |
 
 *1 Unityに組み込まれたライブラリまたは推奨ライブラリを使用してください。
 
@@ -61,12 +63,15 @@ https://docs.unity3d.com/ja/2018.4/Manual/CSharpCompiler.html
 
 | プラットフォーム | バージョン |
 | --- | --- |
-| macOS | 13.5 |
+| Android | 13 |
+| iOS | 16.6.1 |
+| iPadOS | 16.6.1 |
+| macOS | 13.6 |
 | Windows 10 | 22H2 |
 
 ### Cubism SDK for Unity
 
-[Cubism 5 SDK for Unity R1 beta1](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.1-beta.1)
+[Cubism 5 SDK for Unity R1 beta2](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.1-beta.2)
 
 ## ブランチ
 
@@ -106,9 +111,9 @@ SDKの将来についてのフィードバックにも関心があります。Li
 - それ以外の場所ではLINQを使用せず、`foreach`よりも`for`を優先してください。
 - アクセス修飾子を明示的にするようにしてください。`void Update()`ではなく `private void Update()`を使いましょう。
 
-## コミュニティ
+## フォーラム
 
-ご不明な点がございましたら、公式のLive2Dコミュニティに参加して、他のユーザーと話し合ってください。
+ご不明な点がございましたら、公式のLive2Dフォーラムに参加して、他のユーザーと話し合ってください。
 
-- [Live2D 公式コミュニティ](https://creatorsforum.live2d.com/)
-- [Live2D community (English)](https://community.live2d.com/)
+- [Live2D 公式クリエイターズフォーラム](https://creatorsforum.live2d.com/)
+- [Live2D Creator's Forum(English)](https://community.live2d.com/)

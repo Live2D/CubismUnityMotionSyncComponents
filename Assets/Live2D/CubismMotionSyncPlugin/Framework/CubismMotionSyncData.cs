@@ -56,7 +56,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
         /// <summary>
         /// 
         /// </summary>
-        public const float EmphasisLevelDefaultValue = 0.5f;
+        public const float EmphasisLevelDefaultValue = 0.0f;
 
         /// <summary>
         /// 

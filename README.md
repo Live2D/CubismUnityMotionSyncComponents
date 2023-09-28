@@ -29,20 +29,22 @@ If you are looking for the download page of the SDK package, please go to the [d
 
 This library provides the motion-sync function. Live2D Cubism MotionSync Core is not included in this repository.
 
-To download the plugin package that includes Live2D Cubism MotionSync Core, please refer to [this](https://docs.live2d.com/cubism-sdk-manual/download-sdk-motionsync-plugin/) page.
+To download the plugin package that includes Live2D Cubism MotionSync Core, please refer to [this](https://www.live2d.com/sdk/download/motionsync/) page.
 
 ## Development environment
 
 | Unity | Version |
 | --- | --- |
-| LTS | 2022.3.6f1 |
-| LTS | 2021.3.29f1 |
-| LTS | 2020.3.48f1 |
+| Latest | 2023.1.14f1 |
+| LTS | 2022.3.10f1 |
+| LTS | 2021.3.30f1 |
 
 | Library / Tool | Version |
 | --- | --- |
-| Visual Studio 2022 | 17.7.0 |
+| Android SDK / NDK | *1 |
+| Visual Studio 2022 | 17.7.4 |
 | Windows SDK | 10.0.22621.0 |
+| Xcode | 14.3.1 |
 
 *1 Use libraries embedded with Unity or the recommended libraries.
 
@@ -60,12 +62,15 @@ https://docs.unity3d.com/2018.4/Documentation/Manual/CSharpCompiler.html
 
 | Platform | Version |
 | --- | --- |
-| macOS | 13.5 |
+| Android | 13 |
+| iOS | 16.6.1 |
+| iPadOS | 16.6.1 |
+| macOS | 13.6 |
 | Windows 10 | 22H2 |
 
 ### Cubism SDK for Unity
 
-[Cubism 5 SDK for Unity R1 beta1](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.1-beta.1)
+[Cubism 5 SDK for Unity R1 beta2](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.1-beta.2)
 
 ## Branches
 
@@ -105,14 +110,9 @@ Try to stick to the [Microsoft guidelines](https://msdn.microsoft.com/en-us/libr
 - Otherwise, do not use LINQ and prefer `for` to `foreach`.
 - Try to make the access modifier explicit. Use `private void Update()` instead of `void Update()`.
 
-## Community
+## Forum
 
-If you have any questions, please join the official Live2D community and discuss with other users.
+If you have any questions, please join the official Live2D forum and discuss with other users.
 
-- [Live2D 公式コミュニティ (Japanese)](https://creatorsforum.live2d.com/)
-- [Live2D Community](https://community.live2d.com/)
-
----
-
-# Cubism MotionSync Plugin for Unity
-
+- [Live2D Creator's Forum](https://community.live2d.com/)
+- [Live2D 公式クリエイターズフォーラム (Japanese)](https://creatorsforum.live2d.com/)

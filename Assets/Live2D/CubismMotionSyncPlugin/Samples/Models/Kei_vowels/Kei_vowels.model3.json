@@ -37,9 +37,7 @@
 		{
 			"Target": "Parameter",
 			"Name": "LipSync",
-			"Ids": [
-				"ParamMouthOpenY"
-			]
+			"Ids": []
 		},
 		{
 			"Target": "Parameter",
@@ -53,7 +51,7 @@
 	"HitAreas": [
 		{
 			"Id": "HitAreaHead",
-			"Name": "HitArea"
+			"Name": "Head"
 		}
 	]
 }

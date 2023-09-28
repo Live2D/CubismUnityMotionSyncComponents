@@ -52,26 +52,6 @@
 			"Name": "右眉　上下"
 		},
 		{
-			"Id": "ParamBrowLX",
-			"GroupId": "ParamGroup4",
-			"Name": "左眉　左右"
-		},
-		{
-			"Id": "ParamBrowRX",
-			"GroupId": "ParamGroup4",
-			"Name": "右眉　左右"
-		},
-		{
-			"Id": "ParamBrowLAngle",
-			"GroupId": "ParamGroup4",
-			"Name": "左眉　角度"
-		},
-		{
-			"Id": "ParamBrowRAngle",
-			"GroupId": "ParamGroup4",
-			"Name": "右眉　角度"
-		},
-		{
 			"Id": "ParamBrowLForm",
 			"GroupId": "ParamGroup4",
 			"Name": "左眉　変形"
@@ -92,11 +72,6 @@
 			"Name": "左目　笑顔"
 		},
 		{
-			"Id": "ParamEyeLForm",
-			"GroupId": "ParamGroup2",
-			"Name": "左目　変形"
-		},
-		{
 			"Id": "ParamEyeROpen",
 			"GroupId": "ParamGroup2",
 			"Name": "右目　開閉"
@@ -107,11 +82,6 @@
 			"Name": "右目　笑顔"
 		},
 		{
-			"Id": "ParamEyeRForm",
-			"GroupId": "ParamGroup2",
-			"Name": "右目　変形"
-		},
-		{
 			"Id": "ParamEyeBallX",
 			"GroupId": "ParamGroup3",
 			"Name": "目玉 X"
@@ -120,11 +90,6 @@
 			"Id": "ParamEyeBallY",
 			"GroupId": "ParamGroup3",
 			"Name": "目玉 Y"
-		},
-		{
-			"Id": "ParamEyeBallScale",
-			"GroupId": "ParamGroup3",
-			"Name": "目玉　縮小"
 		},
 		{
 			"Id": "ParamMouthForm",
