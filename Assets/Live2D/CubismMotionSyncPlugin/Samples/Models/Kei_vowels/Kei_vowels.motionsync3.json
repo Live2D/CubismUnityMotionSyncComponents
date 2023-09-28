@@ -24,7 +24,7 @@
 					"Smooth": 25
 				},
 				{
-					"Name": "A / あ",
+					"Name": "Aあ",
 					"Id": "ParamA",
 					"Min": 0.0,
 					"Max": 1.0,
@@ -32,7 +32,7 @@
 					"Smooth": 25
 				},
 				{
-					"Name": "I / い",
+					"Name": "I",
 					"Id": "ParamI",
 					"Min": 0.0,
 					"Max": 1.0,
@@ -40,7 +40,7 @@
 					"Smooth": 25
 				},
 				{
-					"Name": "U / う",
+					"Name": "U",
 					"Id": "ParamU",
 					"Min": 0.0,
 					"Max": 1.0,
@@ -48,7 +48,7 @@
 					"Smooth": 25
 				},
 				{
-					"Name": "E / え",
+					"Name": "E",
 					"Id": "ParamE",
 					"Min": 0.0,
 					"Max": 1.0,
@@ -56,7 +56,7 @@
 					"Smooth": 25
 				},
 				{
-					"Name": "O / お",
+					"Name": "O",
 					"Id": "ParamO",
 					"Min": 0.0,
 					"Max": 1.0,

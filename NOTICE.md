@@ -4,9 +4,9 @@
 
 # Notice
 
-## [Restrictions] Supported environments for Cubism SDK MotionSync Plugin for Unity (2023-08-17)
+## [Restrictions] Supported environments for Cubism SDK MotionSync Plugin for Unity (updated 2023-09-28)
 
-As of version R1 beta1 (5-r.1-beta.1) of this plugin, only the following environments have been confirmed to work:
+As of version R1 beta2 (5-r.1-beta.2) of this plugin, only the following environments have been confirmed to work:
 
 * Windows
   * x86
@@ -14,11 +14,17 @@ As of version R1 beta1 (5-r.1-beta.1) of this plugin, only the following environ
 * macOS
   * x86_64
   * ARM64
+* Android
+  * x86
+  * x86_64
+  * ARM32
+  * ARM64
+* iOS
+  * ARM64
+  * x86_64(iOS Simulator)
 
 The following environments will be supported in due course:
 
-* Android
-* iOS
 * WebGL
 
 

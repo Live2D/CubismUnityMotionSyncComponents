@@ -50,6 +50,12 @@ namespace Live2D.CubismMotionSyncPlugin.Plugins
         public delegate void csmMotionSync_AlignedDeallocFunc(IntPtr ptr);
 
         /// <summary>
+        /// LogHandler
+        /// </summary>
+        /// <param name="message">Null-terminated string message to log.</param>
+        public delegate void csmMotionSyncLogFunction(string message);
+
+        /// <summary>
         /// Engine configuration for CRI.
         /// </summary>
         public struct csmMotionSync_EngineConfig_CRI
@@ -176,6 +182,12 @@ namespace Live2D.CubismMotionSyncPlugin.Plugins
         /// <returns>Engine Name.</returns>
         [DllImport(DllName, EntryPoint = "csmMotionSync_GetEngineName")]
         public static extern unsafe char* GetEngineName();
+
+        /// <summary>
+        /// Sets log handler.
+        /// </summary>
+        [DllImport(DllName, EntryPoint = "csmMotionSync_SetLogFunction")]
+        public static extern void SetLogFunction(csmMotionSyncLogFunction handler);
 
         /// <summary>
         /// Initializes the Engine.
