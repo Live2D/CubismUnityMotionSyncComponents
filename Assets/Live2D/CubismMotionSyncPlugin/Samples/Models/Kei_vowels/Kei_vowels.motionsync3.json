@@ -297,7 +297,7 @@
 				}
 			],
 			"PostProcessing": {
-				"BlendRatio": 1.0,
+				"BlendRatio": 0.5,
 				"Smoothing": 60,
 				"SampleRate": 60.0
 			}
