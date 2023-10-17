@@ -8000,7 +8000,7 @@ MonoBehaviour:
         - Parameter: {fileID: 8489654773970017236}
           Value: 1
       PostProcessing:
-        BlendRatio: 1
+        BlendRatio: 0.5
         Smoothing: 60
         SampleRate: 60
       EmphasisLevel: 0
