@@ -5,6 +5,7 @@ under the terms of the Live2D Proprietary Software License Agreement:
 - Android/armeabi-v7a/libLive2DCubismMotionSyncEngine_CRI.so
 - Android/x86/libLive2DCubismMotionSyncEngine_CRI.so
 - Android/x86_64/libLive2DCubismMotionSyncEngine_CRI.so
+- Experimental/Emscripten/3_1_8/Live2DCubismMotionSyncEngine_CRI.bc
 - iOS/Release-iphoneos/libLive2DCubismMotionSyncEngine_CRI.a
 - iOS/Release-iphonesimulator/libLive2DCubismMotionSyncEngine_CRI.a
 - macOS/Live2DCubismMotionSyncEngine_CRI.bundle

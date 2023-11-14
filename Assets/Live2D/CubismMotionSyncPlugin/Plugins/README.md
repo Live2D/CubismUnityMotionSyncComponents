@@ -12,6 +12,7 @@ This folder contains platform-specific library files.
 | Android | armeabi-v7a | Android/armeabi-v7a |   |
 | Android | x86 | Android/x86 |   |
 | Android | x86_64 | Android/x86_64 |   |
+| Emscripten | - | Experimental/Emscripten/3_1_8 | bitcode(upstream LLVM wasm backend) |
 | iOS | ARM64 | iOS/Release-iphoneos | iOS Devices |
 | iOS | x86_64 | iOS/Release-iphonesimulator | iOS Simulator |
 | macOS | x86_64 | macOS |   |
