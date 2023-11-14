@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2bb0673e86f334297055c4a0a8e099, type: 3}
+  m_Name: kei_vowels
+  m_EditorClassIdentifier: 
+  MotionSyncAudioDataInfos:
+  - AudioDataInstanceId: -26046
+    AudioDataObject: {fileID: 11400000, guid: 04986db4de589a346bb85b68126fe96a, type: 2}
+  - AudioDataInstanceId: -26002
+    AudioDataObject: {fileID: 11400000, guid: 6c78b4941ace16a439fa9ecbfe2e24fe, type: 2}
+  - AudioDataInstanceId: -25944
+    AudioDataObject: {fileID: 11400000, guid: e6b64296898391a4b90f6a3dec9bc887, type: 2}
+  - AudioDataInstanceId: -26134
+    AudioDataObject: {fileID: 11400000, guid: d40c7cf2a81e2154bb7f4c01fbb9a806, type: 2}

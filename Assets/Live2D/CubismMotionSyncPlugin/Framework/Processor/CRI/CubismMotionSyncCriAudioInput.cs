@@ -19,7 +19,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
         /// <summary>
         /// Minimum AudioBuffer length per second.
         /// </summary>
-        private const float MinimumBufferLengthPerSecond = 1.0f;
+        public const float MinimumBufferLengthPerSecond = 1.0f;
 
         /// <summary>
         /// AudioBuffer length per second.
@@ -36,32 +36,32 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
         /// <summary>
         /// Buffer.
         /// </summary>
-        public float[] AudioBuffer { get; private set; }
+        public float[] AudioBuffer { get; protected set; }
 
         /// <summary>
         /// Written Position.
         /// </summary>
-        public long CurrentWritePosition { get; private set; }
+        public long CurrentWritePosition { get; protected set; }
 
         /// <summary>
         /// Loaded positions.
         /// </summary>
-        public long CurrentReadPosition { get; private set; }
+        public long CurrentReadPosition { get; protected set; }
 
         /// <summary>
         /// Audio frequency.
         /// </summary>
-        public int Frequency { get; private set; }
+        public int Frequency { get; protected set; }
 
         /// <summary>
         /// Number of Audio channel.
         /// </summary>
-        private int Channels { get; set; }
+        protected int Channels { get; set; }
 
         /// <summary>
         /// Count of Buffer.
         /// </summary>
-        private int BufferCount
+        protected int BufferCount
         {
             get
             {
@@ -69,7 +69,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
             }
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             Frequency = AudioSettings.GetConfiguration().sampleRate;
 
@@ -77,6 +77,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
             AudioBuffer = new float[BufferCount];
         }
 
+#if !UNITY_WEBGL
         /// <summary>
         /// Raises the audio filter read event.
         /// </summary>
@@ -115,6 +116,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
                 WriteSample(data[index]);
             }
         }
+#endif
 
         /// <summary>
         /// Writes the sample to buffer.

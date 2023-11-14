@@ -5,7 +5,7 @@
  * that can be found at https://www.live2d.com/eula/live2d-open-software-license-agreement_en.html.
  */
 
-
+#if !UNITY_WEBGL
 using System.Diagnostics;
 using System.Threading;
 using UnityEngine;
@@ -143,3 +143,4 @@ public class MotionSyncMicInput : MonoBehaviour
         AudioSource.Play();
     }
 }
+#endif
