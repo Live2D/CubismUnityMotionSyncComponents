@@ -316,7 +316,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
         /// <param name="motionSyncData">motion sync data</param>
         public void UpdateCubismMotionSync(CubismMotionSyncData motionSyncData)
         {
-            if (!enabled || MotionSyncAudioInput == null || TargetModelParameters == null)
+            if (!enabled || MotionSyncAudioInput == null || TargetModelParameters == null || MotionSyncController == null)
             {
                 // Fail silently...
                 return;
