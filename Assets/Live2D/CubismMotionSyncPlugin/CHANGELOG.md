@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [Unreleased] - 
+
+### Fixed
+
+Fix an issue with inadequate error handling for missing elements in `UpdateCubismMotionSync`. by [@ppcuni](https://github.com/ppcuni)
+
+
 ## [5-r.1-beta.3] - 2023-11-14
 
 ### Added
