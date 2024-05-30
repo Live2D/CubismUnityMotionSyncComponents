@@ -16,6 +16,7 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL.AudioData.Editor
     /// </summary>
     public class CubismMotionSyncCreateAudioDataMenu : EditorWindow
     {
+#if UNITY_WEBGL
         /// <summary>
         /// Unity editor menu what create <see cref="CubismMotionSyncAudioData"/> asset from <see cref="AudioClip"/> asset.
         /// </summary>
@@ -52,7 +53,8 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL.AudioData.Editor
         public static bool CanCreateAudioData()
         {
             // Enable only when AudioClip is selected.
-            return Selection.activeObject.GetType() == typeof(AudioClip);
+            return Selection.activeObject?.GetType() == typeof(AudioClip);
         }
+#endif // UNITY_WEBGL
     }
 }

@@ -1,0 +1,20 @@
+{
+    "name": "Live2D.CubismMotionSyncPlugin.Editor",
+    "rootNamespace": "Live2D.CubismMotionSyncPlugin.Editor",
+    "references": [
+        "GUID:b2b60b59554a33b41b16ef821fecbac2",
+        "GUID:e5d337e0b3581c343aafde08e6e1727e",
+        "GUID:f3fbd538aeff61f43a51ed88d38c34a8"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

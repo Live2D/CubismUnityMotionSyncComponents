@@ -16,6 +16,7 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL.AudioData.Editor.Inspector
     /// <summary>
     /// Cubism Motion Sync Audio Data List extension.
     /// </summary>
+#if UNITY_WEBGL
     [CustomEditor(typeof(CubismMotionSyncAudioDataList))]
     public class CubismMotionSyncAudioDataListInspector : UnityEditor.Editor
     {
@@ -123,4 +124,5 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL.AudioData.Editor.Inspector
             EditorUtility.SetDirty(dataList);
         }
     }
+#endif // UNITY_WEBGL
 }

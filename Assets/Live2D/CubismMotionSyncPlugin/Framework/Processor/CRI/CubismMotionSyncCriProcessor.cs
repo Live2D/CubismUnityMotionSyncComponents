@@ -10,6 +10,7 @@ using System;
 using UnityEngine;
 using Live2D.Cubism.Core;
 using Live2D.Cubism.Core.Unmanaged;
+using Live2D.Cubism.Framework.Utils;
 
 namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
 {
@@ -316,7 +317,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
         /// <param name="motionSyncData">motion sync data</param>
         public void UpdateCubismMotionSync(CubismMotionSyncData motionSyncData)
         {
-            if (!enabled || MotionSyncAudioInput == null || TargetModelParameters == null)
+            if (!enabled || MotionSyncAudioInput == null || TargetModelParameters == null || MotionSyncController == null)
             {
                 // Fail silently...
                 return;
@@ -362,7 +363,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
             Analyze();
 
             // Reset counter.
-            CurrentRemainTime = CurrentRemainTime % processorDeltaTime;
+            CurrentRemainTime = CubismMath.ModF(CurrentRemainTime, processorDeltaTime);
 
             for (var targetIndex = 0; targetIndex < TargetModelParameters.Length; targetIndex++)
             {
@@ -408,8 +409,9 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
             // Overwrites older data blocks since the size is fixed.
             AnalysisConfig.CommitChanges();
 
+            var previousRequireSampleCount = 0u;
 
-            for (var currentReadPosition = lastReadPosition; currentReadPosition + requireSampleCount < currentPosition; currentReadPosition += requireSampleCount)
+            for (var currentReadPosition = lastReadPosition; currentReadPosition + requireSampleCount < currentPosition; currentReadPosition += previousRequireSampleCount)
             {
                 var result = Context.Analyze(requireSampleCount, AnalysisResult, AnalysisConfig, MotionSyncAudioInput);
 
@@ -421,6 +423,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
 
                 AnalysisResult.PullData();
 
+                previousRequireSampleCount = requireSampleCount;
                 requireSampleCount = Context.RequireSampleCount;
                 PostProcessor.Process(TargetModelParameters, AnalysisResult);
             }

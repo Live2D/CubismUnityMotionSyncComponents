@@ -49,10 +49,10 @@ namespace Live2D.CubismMotionSyncPlugin.Editor.Inspectors
                 audioInput.ListeningChannel = 0;
             }
 
+            var dataList = serializedObject.FindProperty("_dataList");
 #if !UNITY_WEBGL
             EditorGUI.BeginDisabledGroup(true);
 #endif
-            var dataList = serializedObject.FindProperty("_dataList");
             EditorGUILayout.PropertyField(dataList, new GUIContent("Data List (WebGL only)"));
 #if !UNITY_WEBGL
             EditorGUI.EndDisabledGroup();

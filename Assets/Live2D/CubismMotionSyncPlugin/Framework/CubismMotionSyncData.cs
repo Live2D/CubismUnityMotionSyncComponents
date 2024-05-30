@@ -19,49 +19,49 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
         #region Const Values
 
         /// <summary>
-        /// 
+        /// Minimum blend ratio
         /// </summary>
         public const float BlendRatioMinValue = 0.0f;
 
         /// <summary>
-        /// 
+        /// Maximum blend ratio
         /// </summary>
         public const float BlendRatioMaxValue = 1.0f;
 
         /// <summary>
-        /// 
+        /// Minimum smoothing
         /// </summary>
         public const int SmoothingMinValue = 1;
 
         /// <summary>
-        /// 
+        /// Maximum smoothing
         /// </summary>
         public const int SmoothingMaxValue = 100;
 
         /// <summary>
-        /// 
+        /// Minimum calculation frame rate
         /// </summary>
         public const float SampleRateMinValue = 1.0f;
 
         /// <summary>
-        /// 
+        /// Maximum calculation frame rate
         /// </summary>
         public const float SampleRateMaxValue = 120.0f;
 
         /// <summary>
-        /// 
+        /// Minimum volume influence
         /// </summary>
-        public const float EmphasisLevelMinValue = 0.0f;
+        public const float EmphasisLevelMinValue = 0.0f; // Unused
 
         /// <summary>
-        /// 
+        /// Maximum volume influence
         /// </summary>
-        public const float EmphasisLevelDefaultValue = 0.0f;
+        public const float EmphasisLevelDefaultValue = 0.0f; // Unused
 
         /// <summary>
-        /// 
+        /// Default volume influence value
         /// </summary>
-        public const float EmphasisLevelMaxValue = 1.0f;
+        public const float EmphasisLevelMaxValue = 1.0f; // Unused
 
         #endregion
 
@@ -313,7 +313,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
             /// Percentage of audio emphasis.
             /// </summary>
             [SerializeField]
-            public float EmphasisLevel;
+            public float EmphasisLevel; // Unused
         }
 
         /// <summary>

@@ -35,18 +35,18 @@ To download the plugin package that includes Live2D Cubism MotionSync Core, plea
 
 | Unity | Version |
 | --- | --- |
-| Latest | 2023.1.19f1 (*1) |
-| LTS | 2022.3.12f1 |
-| LTS | 2021.3.31f1 |
+| Latest | 2023.2.20f1 (*1) |
+| LTS | 2022.3.30f1 |
+| LTS | 2021.3.38f1 |
 
 *1 ARMv7 Android is not supported.
 
 | Library / Tool | Version |
 | --- | --- |
 | Android SDK / NDK | *1 |
-| Visual Studio 2022 | 17.7.6 |
+| Visual Studio 2022 | 17.9.7 |
 | Windows SDK | 10.0.22621.0 |
-| Xcode | 14.3.1 |
+| Xcode | 15.4 |
 
 *1 Use libraries embedded with Unity or the recommended libraries.
 
@@ -64,16 +64,21 @@ https://docs.unity3d.com/2018.4/Documentation/Manual/CSharpCompiler.html
 
 | Platform | Version |
 | --- | --- |
-| Android | 13 |
-| iOS | 16.6.1 |
-| iPadOS | 16.6.1 |
-| macOS | 13.6 |
+| Android | 14 |
+| iOS | 17.5.1 |
+| iPadOS | 17.5.1 |
+| macOS | 14.5 |
 | Windows 10 | 22H2 |
-| Google Chrome | 119.0.6045.106 |
+| Google Chrome | 125.0.6422.113 |
 
 ### Cubism SDK for Unity
 
-[Cubism 5 SDK for Unity R1 beta3](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.1-beta.3)
+[Cubism 5 SDK for Unity R2](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.2)
+
+## Microphone samples
+
+In this sample, the input sound is played directly through the device's sound playback system.
+ Depending on your environment, feedback may occur. To prevent this, please mute the sample application and the device's sound playback, or move the microphone and speaker away from each other.
 
 ## Branches
 
@@ -87,19 +92,19 @@ Copy all files under `./Assets` into the folder where this plugin is located in 
 
 ## Contribution to the project
 
-There are many ways to contribute to the project: logging bugs, submitting pull requests on this GitHub, and reporting issues and making suggestions in Live2D Community.
+There are many ways to contribute to the project: logging bugs, submitting pull requests on this GitHub, and reporting issues and making suggestions in Live2D Forum.
 
 ### Forking and Pull Requests
 
-We very much appreciate your pull requests, whether they bring fixes, improvements, or even new features. Note, however, that the wrapper is designed to be as lightweight and shallow as possible and should therefore only be subject to bug fixes and memory/performance improvements. To keep the main repository as clean as possible, please create a personal fork and feature branch as needed.
+We very much appreciate your pull requests, whether they bring fixes, improvements, or even new features. To keep the main repository as clean as possible, create a personal fork and feature branches there as needed.
 
 ### Bugs
 
-We are regularly checking bug reports and feature requests at Live2D Community. Before submitting a bug report, please search the Live2D Community to see if the bug report or feature request has already been submitted. Add your comment to the relevant issue if it already exists.
+We are regularly checking bug reports and feature requests at Live2D Forum. Before submitting a bug report, please search the Live2D Forum to see if the bug report or feature request has already been submitted. Add your comment to the relevant issue if it already exists.
 
 ### Suggestions
 
-We're also interested in your feedback for the future of the SDK. You can submit a suggestion or feature request at Live2D Community. To make this process more effective, we're asking that you include more information to help define them more clearly.
+We're also interested in your feedback for the future of the SDK. You can submit a suggestion or feature request at Live2D Forum. To make this process more effective, we're asking that you include more information to help define them more clearly.
 
 ## Coding Guidelines
 
@@ -117,5 +122,5 @@ Try to stick to the [Microsoft guidelines](https://msdn.microsoft.com/en-us/libr
 
 If you have any questions, please join the official Live2D forum and discuss with other users.
 
-- [Live2D Creator's Forum](https://community.live2d.com/)
+- [Live2D Creators Forum](https://community.live2d.com/)
 - [Live2D 公式クリエイターズフォーラム (Japanese)](https://creatorsforum.live2d.com/)
