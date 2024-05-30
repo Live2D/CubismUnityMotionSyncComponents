@@ -5,11 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [Unreleased] - 
+## [5-r.1] - 2024-05-30
+
+### Added
+
+* Add configuration file so that assemblies are split.
+  * These assemblies depend on the Cubism SDK for Unity assemblies.
+
+### Changed
+
+* Change the version of the development project to `2021.3.36f1`.
+* Change the usage of the modulo operator `%` to `CubismMath.ModF()`.
+* Change the Japanese sound file to one with a sampling frequency of 48 kHz.
+* Change to not display the generation menu for the `CubismMotionSyncAudioData` asset and `CubismMotionSyncAudioDataList` asset when the platform setting is not `WebGL`.
+* The APIs related to `MotionSyncData.SerializableSetting.EmphasisLevel` have been marked as `Unused`.
+  * For the sake of Prefab compatibility, the APIs are being retained.
 
 ### Fixed
 
-Fix an issue with inadequate error handling for missing elements in `UpdateCubismMotionSync`. by [@ppcuni](https://github.com/ppcuni)
+* Fix an issue with inadequate error handling for missing elements in `UpdateCubismMotionSync`. by [@ppcuni](https://github.com/ppcuni)
+* Fix an issue where the actual number of samples consumed differed from the number of samples being measured.
+* Fix an issue with inadequate error handling for missing elements in `CubismMotionSyncCreateAudioDataMenu.CanCreateAudioData()`.
 
 
 ## [5-r.1-beta.3] - 2023-11-14
@@ -60,6 +76,7 @@ Fix an issue with inadequate error handling for missing elements in `UpdateCubis
 * New released!
 
 
+[5-r.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.3...5-r.1
 [5-r.1-beta.3]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.2.1...5-r.1-beta.3
 [5-r.1-beta.2.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.2...5-r.1-beta.2.1
 [5-r.1-beta.2]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.1...5-r.1-beta.2

@@ -17,12 +17,14 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL
     /// </summary>
     public class CubismMotionSyncCriAudioInputWebGL : CubismMotionSyncCriAudioInput
     {
+
         /// <summary>
         ///  List of motionsync audio data to be used in WebGL.
         /// </summary>
         [SerializeField, HideInInspector]
-        private CubismMotionSyncAudioDataList _dataList = null;
+        private CubismMotionSyncAudioDataList _dataList;
 
+#if UNITY_WEBGL
         /// <summary>
         /// <see cref="AudioSource.timeSamples"/> of previous frame.
         /// </summary>
@@ -42,9 +44,7 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL
         {
             base.Awake();
 
-#if UNITY_WEBGL
             AudioSource = GetComponent<AudioSource>();
-#endif
         }
 
         private void Update()
@@ -124,5 +124,6 @@ namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL
             // Prepare for the next frame.
             _previousTimeSamples = currentTimeSamples;
         }
+#endif // UNITY_WEBGL
     }
 }

@@ -11,7 +11,9 @@ using UnityEngine;
 
 namespace Live2D.CubismMotionSyncPlugin.Samples.WebGL.AudioData
 {
+#if UNITY_WEBGL
     [CreateAssetMenu(menuName = "Live2D Cubism/MotionSync/Audio Data List")]
+#endif // UNITY_WEBGL
     public class CubismMotionSyncAudioDataList : ScriptableObject
     {
         /// <summary>
