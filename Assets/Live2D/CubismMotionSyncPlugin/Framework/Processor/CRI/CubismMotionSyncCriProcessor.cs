@@ -158,9 +158,18 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
         /// </summary>
         private float CurrentRemainTime { get; set; }
 
+        /// <summary>
+        /// <see cref="CubismMotionSyncCriEngine.InitializeEngine"/> was called or not
+        /// </summary>
+        /// <remarks>
+        /// Since it is not a good idea to call <see cref="CubismMotionSyncCriEngine.DisposeEngine"/> before <see cref="CubismMotionSyncCriEngine.InitializeEngine"/> is called cache whether it is initialized or not.
+        /// </remarks>
+        private bool IsEngineInitialized { get; set; }
+
         private void Start()
         {
             CubismMotionSyncCriEngine.InitializeEngine();
+            IsEngineInitialized = true;
 
 
             if (!CubismMotionSyncCriEngine.IsInitialized)
@@ -189,7 +198,8 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
             }
 
 
-            CubismMotionSyncCriEngine.DisposeEngine();
+            if (IsEngineInitialized)
+                CubismMotionSyncCriEngine.DisposeEngine();
         }
 
         /// <summary>
