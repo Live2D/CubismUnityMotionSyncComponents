@@ -199,7 +199,9 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
 
 
             if (IsEngineInitialized)
+            {
                 CubismMotionSyncCriEngine.DisposeEngine();
+            }
         }
 
         /// <summary>
