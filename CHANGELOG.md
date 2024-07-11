@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-* Fix an issue where `CubismMotionSyncEngine_CRI.DisposeEngine()` could be called at an unintended time.
+* Fix an issue where `CubismMotionSyncEngine_CRI.DisposeEngine()` could be called at an unintended time. by [@ppcuni](https://github.com/Live2D/CubismUnityMotionSyncComponents/pull/6)
 
 
 ## [5-r.1] - 2024-05-30
