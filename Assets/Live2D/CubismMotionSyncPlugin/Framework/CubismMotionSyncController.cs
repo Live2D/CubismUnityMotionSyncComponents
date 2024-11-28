@@ -94,7 +94,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
             // Remove old processors.
             var oldProcessors = gameObject.GetComponents<ICubismMotionSyncProcessor>();
 
-            if (MotionSyncData.Settings.Length <= oldProcessors.Length)
+            if (MotionSyncData == null || MotionSyncData.Settings.Length <= oldProcessors.Length)
             {
                 return;
             }
@@ -159,6 +159,12 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
 
             if (Processors != null)
             {
+                return;
+            }
+
+            if (MotionSyncData == null)
+            {
+                Debug.LogWarning($"[CubismMotionSyncController.OnEnable]: Motion sync data does not exist, so generation is skipped. Please set `MotionSyncData` and then use `CubismMotionSyncController.CreateProcessors` function");
                 return;
             }
 

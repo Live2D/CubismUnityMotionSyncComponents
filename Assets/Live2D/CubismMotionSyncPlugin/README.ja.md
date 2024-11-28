@@ -36,18 +36,15 @@ Live2D Cubism MotionSync Coreを同梱したプラグインパッケージをダ
 
 | Unity | バージョン |
 | --- | --- |
-| Latest | 2023.2.20f1 (*1) |
-| LTS | 2022.3.30f1 |
-| LTS | 2021.3.38f1 |
-
-*1 ARMv7のAndroidは非対応です。
+| Latest | 6000.0.27f1 |
+| LTS | 2022.3.52f1 |
 
 | ライブラリ / ツール | バージョン |
 | --- | --- |
 | Android SDK / NDK | *1 |
-| Visual Studio 2022 | 17.9.7 |
-| Windows SDK | 10.0.22621.0 |
-| Xcode | 15.4 |
+| Visual Studio 2022 | 17.12.1 |
+| Windows SDK | 10.0.26100.0 |
+| Xcode | 16.1 |
 
 *1 Unityに組み込まれたライブラリまたは推奨ライブラリを使用してください。
 
@@ -65,21 +62,24 @@ https://docs.unity3d.com/ja/2018.4/Manual/CSharpCompiler.html
 
 | プラットフォーム | バージョン |
 | --- | --- |
-| Android | 14 |
-| iOS | 17.5.1 |
-| iPadOS | 17.5.1 |
-| macOS | 14.5 |
-| Windows 10 | 22H2 |
-| Google Chrome | 125.0.6422.113 |
+| Android | 15 |
+| iOS | 18.1.1 |
+| iPadOS | 18.1.1 |
+| macOS | 15.1 |
+| Windows 11 | 23H2 |
+| Google Chrome | 131.0.6778.86 |
 
 ### Cubism SDK for Unity
 
-[Cubism 5 SDK for Unity R2](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.2)
+[Cubism 5 SDK for Unity R3](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.3)
 
 ## マイクサンプル
 
 本サンプルでは入力した音声がデバイスの音声再生機器へそのまま再生されます。
 ご利用の環境によってはハウリングする場合がございますので、サンプルアプリケーションやデバイスの音声再生機器を一度ミュートにするか、マイクとスピーカーの位置を離してご利用ください。
+
+`UnityEngine.Microphone` クラスをシーンで利用していない場合でも Unity が Microphone サンプルのアセンブリ情報を含んだ状態でビルドを行うため、MacOS 及び iOS 向けビルドでは `Player Settings` にて `Microphone Usage Description` を記載する必要があります。
+MacOS 及び iOS 向けのビルドを行う際、Microphone クラスを利用しない場合は `Assets/Live2D/CubismMotionSyncPlugin/Samples/Microphone` ディレクトリを削除してご利用ください。
 
 ## ブランチ
 

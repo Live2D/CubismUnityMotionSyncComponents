@@ -35,18 +35,15 @@ To download the plugin package that includes Live2D Cubism MotionSync Core, plea
 
 | Unity | Version |
 | --- | --- |
-| Latest | 2023.2.20f1 (*1) |
-| LTS | 2022.3.30f1 |
-| LTS | 2021.3.38f1 |
-
-*1 ARMv7 Android is not supported.
+| Latest | 6000.0.27f1 |
+| LTS | 2022.3.52f1 |
 
 | Library / Tool | Version |
 | --- | --- |
 | Android SDK / NDK | *1 |
-| Visual Studio 2022 | 17.9.7 |
-| Windows SDK | 10.0.22621.0 |
-| Xcode | 15.4 |
+| Visual Studio 2022 | 17.12.1 |
+| Windows SDK | 10.0.26100.0 |
+| Xcode | 16.1 |
 
 *1 Use libraries embedded with Unity or the recommended libraries.
 
@@ -64,21 +61,25 @@ https://docs.unity3d.com/2018.4/Documentation/Manual/CSharpCompiler.html
 
 | Platform | Version |
 | --- | --- |
-| Android | 14 |
-| iOS | 17.5.1 |
-| iPadOS | 17.5.1 |
-| macOS | 14.5 |
-| Windows 10 | 22H2 |
-| Google Chrome | 125.0.6422.113 |
+| Android | 15 |
+| iOS | 18.1.1 |
+| iPadOS | 18.1.1 |
+| macOS | 15.1 |
+| Windows 11 | 23H2 |
+| Google Chrome | 131.0.6778.86 |
 
 ### Cubism SDK for Unity
 
-[Cubism 5 SDK for Unity R2](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.2)
+[Cubism 5 SDK for Unity R3](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.3)
 
-## Microphone samples
+## Microphone Sample
 
 In this sample, the input sound is played directly through the device's sound playback system.
- Depending on your environment, feedback may occur. To prevent this, please mute the sample application and the device's sound playback, or move the microphone and speaker away from each other.
+Depending on your environment, feedback may occur. To prevent this, please mute the sample application and the device's sound playback, or move the microphone and speaker away from each other.
+
+Unity builds with the assembly information of the Microphone sample even if the `UnityEngine.Microphone` class is not used in the scene. `Microphone Usage Description` must be included in `Player Settings` for MacOS and iOS builds.
+If you do not use the Microphone class when building for MacOS and iOS, please delete the `Assets/Live2D/CubismMotionSyncPlugin/Samples/Microphone` directory.
+
 
 ## Branches
 

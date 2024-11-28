@@ -5,11 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [Unreleased] - ####-##-##
+## [5-r.2] - 2024-11-28
+
+### Added
+
+* Add a feature to play the associated audio when playing back a motion.
+ * With this feature, `.motionSyncLink.asset` and `.motionSyncLinkList.asset` is generated based on the information specified in `.model3.json` during the import process.
+
+### Changed
+
+* Move `Microphone` sample to `Assets/Live2D/CubismMotionSyncPlugin/Samples/Microphone`.
+* Move `Microphone` sample to a separate assembly.
 
 ### Fixed
 
+* Fix an issue where a reference error could occur immediately after `CubismMotionSyncController` was enabled.
 * Fix an issue where `CubismMotionSyncEngine_CRI.DisposeEngine()` could be called at an unintended time. by [@ppcuni](https://github.com/Live2D/CubismUnityMotionSyncComponents/pull/6)
+* Fix an issue where a null reference occurs if there are parameters listed in `.motionsync3.json` that do not exist in the model.
+* Fix an issue where where models names in the dropdown menus for `MotionSync` scene and `MotionSyncForWebGL` scene were incorrect.
 
 
 ## [5-r.1] - 2024-05-30
@@ -83,6 +96,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * New released!
 
 
+[5-r.2]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1...5-r.2
 [5-r.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.3...5-r.1
 [5-r.1-beta.3]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.2.1...5-r.1-beta.3
 [5-r.1-beta.2.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.2...5-r.1-beta.2.1
