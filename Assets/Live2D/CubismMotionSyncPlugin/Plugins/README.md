@@ -11,7 +11,6 @@ This folder contains platform-specific library files with using the motion sync.
 | Platform | Architecture | Path | Note |
 | --- | --- | --- | --- |
 | Android | arm64-v8a | Android/arm64-v8a |   |
-| Android | armeabi-v7a | Android/armeabi-v7a | This library is currently deprecated and will be removed in the near future. |
 | Android | x86 | Android/x86 |   |
 | Android | x86_64 | Android/x86_64 |   |
 | Emscripten | - | Experimental/Emscripten/3_1_8 | bitcode(upstream LLVM wasm backend) |

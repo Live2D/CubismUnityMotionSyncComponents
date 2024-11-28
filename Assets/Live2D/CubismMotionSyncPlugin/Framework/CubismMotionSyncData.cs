@@ -186,7 +186,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
             public string Name;
 
             /// <summary>
-            /// Id about audio parameters.
+            /// ID about audio parameters.
             /// NOTE: It is a string that can be used for any audio sync library.
             /// </summary>
             [SerializeField]
@@ -218,7 +218,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
         }
 
         /// <summary>
-        /// Template for associating Id and Value.
+        /// Template for associating ID and Value.
         /// </summary>
         [Serializable]
         public struct SerializableTarget
@@ -268,7 +268,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
         public struct SerializableSetting
         {
             /// <summary>
-            /// Id about setting.
+            /// ID about setting.
             /// </summary>
             [SerializeField]
             public string Id;
@@ -404,7 +404,7 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
                         break;
                     default:
                         motionSyncData.Settings[settingIndex].AnalysisType = AnalysisType.Unknown;
-                        Debug.LogError($"MotionSyncData.Settings[{settingIndex}].AnalysisType is Unkown.");
+                        Debug.LogError($"MotionSyncData.Settings[{settingIndex}].AnalysisType is Unknown.");
                         break;
                 }
 
@@ -416,15 +416,26 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
                         break;
                     default:
                         motionSyncData.Settings[settingIndex].UseCase = UseCase.Unknown;
-                        Debug.LogError($"MotionSyncData.Settings[{settingIndex}].UseCase is Unkown.");
+                        Debug.LogError($"MotionSyncData.Settings[{settingIndex}].UseCase is Unknown.");
                         break;
                 }
+
+                // Create a flag indicating whether there are any ignored keys.
+                var isIgnoredKey = false;
 
                 motionSyncData.Settings[settingIndex].CubismParameters = new SerializableCubismParameter[json.Settings[settingIndex].CubismParameters.Length];
                 // Set CubismParameter.
                 for (var cubismParameterIndex = 0; cubismParameterIndex < json.Settings[settingIndex].CubismParameters.Length; cubismParameterIndex++)
                 {
-                    motionSyncData.Settings[settingIndex].CubismParameters[cubismParameterIndex].Parameter = model.Parameters.FindById(json.Settings[settingIndex].CubismParameters[cubismParameterIndex].Id);
+                    var parameter = model.Parameters.FindById(json.Settings[settingIndex].CubismParameters[cubismParameterIndex].Id);
+
+                    if (parameter == null)
+                    {
+                        Debug.LogWarning($"This model have not parameter ID \"{json.Settings[settingIndex].CubismParameters[cubismParameterIndex].Id}\".\nThis key is ignored.");
+                        isIgnoredKey = true;
+                    }
+
+                    motionSyncData.Settings[settingIndex].CubismParameters[cubismParameterIndex].Parameter = parameter;
                     motionSyncData.Settings[settingIndex].CubismParameters[cubismParameterIndex].Min = json.Settings[settingIndex].CubismParameters[cubismParameterIndex].Min;
                     motionSyncData.Settings[settingIndex].CubismParameters[cubismParameterIndex].Max = json.Settings[settingIndex].CubismParameters[cubismParameterIndex].Max;
                     motionSyncData.Settings[settingIndex].CubismParameters[cubismParameterIndex].Damper = json.Settings[settingIndex].CubismParameters[cubismParameterIndex].Damper;
@@ -457,23 +468,42 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
                             break;
                         default:
                             motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Type = MappingType.Unknown;
-                            Debug.LogError($"MotionSyncData.Settings[{settingIndex}].Mappings[{mappingIndex}].Type is Unkown.");
+                            Debug.LogError($"MotionSyncData.Settings[{settingIndex}].Mappings[{mappingIndex}].Type is Unknown.");
                             break;
                     }
 
                     // Set audio parameter Id.
                     motionSyncData.Settings[settingIndex].Mappings[mappingIndex].AudioParameterId = json.Settings[settingIndex].Mappings[mappingIndex].Id;
 
-                    motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets = new SerializableTarget[json.Settings[settingIndex].Mappings[mappingIndex].Targets.Length];
-                    // Set taegets.
+                    // Create targets array.
+                    motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets = Array.Empty<SerializableTarget>();
+
+                    // Set targets.
                     for (var targetIndex = 0; targetIndex < json.Settings[settingIndex].Mappings[mappingIndex].Targets.Length; targetIndex++)
                     {
-                        motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Parameter = model.Parameters.FindById(json.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Id);
-                        motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Value = json.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Value;
+                        var parameter = model.Parameters.FindById(json.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Id);
+
+                        if (parameter == null)
+                        {
+                            Debug.LogWarning($"This model have not parameter ID \"{json.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Id}\".\nThis key is ignored.");
+                            isIgnoredKey = true;
+                        }
+
+                        // Resize targets.
+                        var targetsLength = motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets.Length;
+                        Array.Resize(ref motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets, targetsLength + 1);
+
+                        motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets[targetsLength].Parameter = parameter;
+                        motionSyncData.Settings[settingIndex].Mappings[mappingIndex].Targets[targetsLength].Value = json.Settings[settingIndex].Mappings[mappingIndex].Targets[targetIndex].Value;
+                    }
+
+                    if (isIgnoredKey)
+                    {
+                        Debug.LogWarning($"Some parameter ID keys is ignored. Please check this model if it is necessary to use all parameter ID keys.");
                     }
                 }
 
-                // Set post processing.
+                // Set post-processing.
                 motionSyncData.Settings[settingIndex].PostProcessing.BlendRatio = Mathf.Clamp01(json.Settings[settingIndex].PostProcessing.BlendRatio);
                 motionSyncData.Settings[settingIndex].PostProcessing.Smoothing = Mathf.Clamp(json.Settings[settingIndex].PostProcessing.Smoothing, SmoothingMinValue, SmoothingMaxValue);
                 motionSyncData.Settings[settingIndex].PostProcessing.SampleRate = Mathf.Clamp(json.Settings[settingIndex].PostProcessing.SampleRate, SampleRateMinValue, SampleRateMaxValue);

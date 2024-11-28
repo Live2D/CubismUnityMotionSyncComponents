@@ -60,7 +60,7 @@ namespace Live2D.CubismMotionSyncPlugin.Editor.Importers
         #endregion
 
         /// <summary>
-        /// Set expression list.
+        /// Get motionsync .
         /// </summary>
         /// <param name="importer">Event source.</param>
         /// <param name="model">Imported model.</param>
