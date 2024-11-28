@@ -60,14 +60,21 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
                 var targetsIdSize = 0;
                 for (var targetIndex = 0; targetIndex < serializableMappings[i].Targets.Length; targetIndex++)
                 {
-                    targetsIdSize += encoding.GetByteCount(serializableMappings[i].Targets[targetIndex].Parameter.Id);
+                    // Null check.
+                    var size = serializableMappings[i].Targets[targetIndex].Parameter != null
+                        ? encoding.GetByteCount(serializableMappings[i].Targets[targetIndex].Parameter.Id)
+                        : 0;
+                    targetsIdSize += size;
                 }
 
 
                 MappingInfoArray[i].ModelParameterIds = (char**)CubismUnmanagedMemory.Allocate(targetsIdSize, CubismMotionSyncCriProcessor.DefaultAlign);
                 for (var targetIndex = 0; targetIndex < serializableMappings[i].Targets.Length; targetIndex++)
                 {
-                    var cubismParametersPtr = Marshal.StringToHGlobalAnsi(serializableMappings[i].Targets[targetIndex].Parameter.Id);
+                    // Null check.
+                    var cubismParametersPtr = serializableMappings[i].Targets[targetIndex].Parameter != null
+                        ? Marshal.StringToHGlobalAnsi(serializableMappings[i].Targets[targetIndex].Parameter.Id)
+                        : IntPtr.Zero;
                     MappingInfoArray[i].ModelParameterIds[targetIndex] = (char*)cubismParametersPtr;
                 }
 
@@ -76,7 +83,11 @@ namespace Live2D.CubismMotionSyncPlugin.Framework.Processor.CRI
                 MappingInfoArray[i].ModelParameterValues = (float*)CubismUnmanagedMemory.Allocate(targetsValueSize, CubismMotionSyncCriProcessor.DefaultAlign);
                 for (var j = 0; j < serializableMappings[i].Targets.Length; j++)
                 {
-                    MappingInfoArray[i].ModelParameterValues[j] = serializableMappings[i].Targets[j].Value;
+                    // Null check.
+                    var value = serializableMappings[i].Targets[j].Parameter != null
+                        ? serializableMappings[i].Targets[j].Value
+                        : 0;
+                    MappingInfoArray[i].ModelParameterValues[j] = value;
                 }
 
 
