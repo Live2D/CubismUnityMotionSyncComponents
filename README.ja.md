@@ -36,15 +36,15 @@ Live2D Cubism MotionSync Coreを同梱したプラグインパッケージをダ
 
 | Unity | バージョン |
 | --- | --- |
-| Latest | 6000.0.27f1 |
-| LTS | 2022.3.52f1 |
+| Latest | 6000.3.14f1 |
+| LTS | 6000.0.73f1 |
 
 | ライブラリ / ツール | バージョン |
 | --- | --- |
 | Android SDK / NDK | *1 |
-| Visual Studio 2022 | 17.12.1 |
-| Windows SDK | 10.0.26100.0 |
-| Xcode | 16.1 |
+| Visual Studio 2022 | 17.14.38 |
+| Windows SDK | 10.0.26100.7705 |
+| Xcode | 26.6 |
 
 *1 Unityに組み込まれたライブラリまたは推奨ライブラリを使用してください。
 
@@ -62,16 +62,15 @@ https://docs.unity3d.com/ja/2018.4/Manual/CSharpCompiler.html
 
 | プラットフォーム | バージョン |
 | --- | --- |
-| Android | 15 |
-| iOS | 18.1.1 |
-| iPadOS | 18.1.1 |
-| macOS | 15.1 |
-| Windows 11 | 23H2 |
-| Google Chrome | 131.0.6778.86 |
+| Android | 17 |
+| iOS / iPadOS | 26.6 |
+| macOS | 26.6 |
+| Windows 11 | 25H2 |
+| Google Chrome | 151.0.7922.138 |
 
 ### Cubism SDK for Unity
 
-[Cubism 5 SDK for Unity R3](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.3)
+[Cubism 5 SDK for Unity R4_2](https://github.com/Live2D/CubismUnityComponents/releases/tag/5-r.4.2)
 
 ## マイクサンプル
 

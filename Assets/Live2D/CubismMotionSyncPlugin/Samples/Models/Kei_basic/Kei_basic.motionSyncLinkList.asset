@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e110e88a8960d498431b2e91cd546d, type: 3}
+  m_Name: Kei_basic.motionSyncLinkList
+  m_EditorClassIdentifier: 
+  CubismMotionSyncLinkObjects:
+  - {fileID: 11400000, guid: a2159177c1b70294d9ba2264d61dbde2, type: 2}
+  - {fileID: 11400000, guid: 0537dc4fb63931d4cb2b1a541ff1950c, type: 2}
+  - {fileID: 11400000, guid: 10fb8a0b1140a0f40b20f50d42d7e5cf, type: 2}
+  - {fileID: 11400000, guid: ebbc6353bb890114f8380c75ba7fd29b, type: 2}

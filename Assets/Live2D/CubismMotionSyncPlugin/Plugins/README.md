@@ -10,16 +10,17 @@ This folder contains platform-specific library files with using the motion sync.
 
 | Platform | Architecture | Path | Note |
 | --- | --- | --- | --- |
-| Android | arm64-v8a | Android/arm64-v8a |   |
-| Android | x86 | Android/x86 |   |
-| Android | x86_64 | Android/x86_64 |   |
-| Emscripten | - | Experimental/Emscripten/3_1_8 | bitcode(upstream LLVM wasm backend) |
-| iOS | ARM64 | iOS/Release-iphoneos | iOS Devices |
-| iOS | x86_64 | iOS/Release-iphonesimulator | iOS Simulator |
-| macOS | x86_64 | macOS |   |
-| macOS | ARM64 | macOS |   |
-| Windows | x86 | Windows/x86 |   |
-| Windows | x86_64 | Windows/x86_64 |   |
+| Android | arm64-v8a | CRI/Android/arm64-v8a |   |
+| Android | x86 | CRI/Android/x86 |   |
+| Android | x86_64 | CRI/Android/x86_64 |   |
+| Emscripten | - | CRI/Experimental/Emscripten/3_1_8 | bitcode(upstream LLVM wasm backend) |
+| iOS | ARM64 | CRI/iOS/Release-iphoneos | iOS Devices |
+| iOS | ARM64 | CRI/iOS/Release-iphonesimulator | iOS Simulator |
+| iOS | x86_64 | CRI/iOS/Release-iphonesimulator | iOS Simulator |
+| macOS | ARM64 | CRI/macOS |   |
+| macOS | x86_64 | CRI/macOS |   |
+| Windows | x86 | CRI/Windows/x86 |   |
+| Windows | x86_64 | CRI/Windows/x86_64 |   |
 
 ---
 

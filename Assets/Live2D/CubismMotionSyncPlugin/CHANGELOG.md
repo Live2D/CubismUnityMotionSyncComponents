@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [5-r.2.1] - 2026-08-25
+
+### Changed
+
+* Implement support for Android 16KB page size.
+* Change the version of the development project to `6000.0.68f1`.
+
+### Fixed
+
+* Fix locations where the `SerializeField` attribute was incorrectly applied to properties.
+
+
 ## [5-r.2] - 2024-11-28
 
 ### Added
@@ -96,6 +108,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * New released!
 
 
+[5-r.2.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.2...5-r.2.1
 [5-r.2]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1...5-r.2
 [5-r.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.3...5-r.1
 [5-r.1-beta.3]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.2.1...5-r.1-beta.3

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e110e88a8960d498431b2e91cd546d, type: 3}
+  m_Name: Kei_vowels.motionSyncLinkList
+  m_EditorClassIdentifier: 
+  CubismMotionSyncLinkObjects:
+  - {fileID: 11400000, guid: 476957443b97b8644aacf15758214cb0, type: 2}
+  - {fileID: 11400000, guid: 95bbbdf732d8ee2408f5d67ccaf56914, type: 2}
+  - {fileID: 11400000, guid: 67768e4b728551b44a0b34a1c4b478df, type: 2}
+  - {fileID: 11400000, guid: 73135169ae5c0b54f9936ab8fa010e31, type: 2}

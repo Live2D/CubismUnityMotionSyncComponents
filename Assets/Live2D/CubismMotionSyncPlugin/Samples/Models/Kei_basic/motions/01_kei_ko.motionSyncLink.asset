@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f9f5e4cf687ba43ac0c145e72e0931, type: 3}
+  m_Name: 01_kei_ko.motionSyncLink
+  m_EditorClassIdentifier: 
+  MotionPath: motions/01_kei_ko.motion3.json
+  MotionInstanceId: 45754
+  MotionSyncSettingId: Basic_CRI
+  audioClip: {fileID: 8300000, guid: 627c6bda10e545943a531e0ff1be2940, type: 3}

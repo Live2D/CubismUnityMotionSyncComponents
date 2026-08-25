@@ -30,7 +30,6 @@ namespace Live2D.CubismMotionSyncPlugin.Framework
         /// <summary>
         /// Motion sync data.
         /// </summary>
-        [SerializeField]
         public CubismMotionSyncData MotionSyncData
         {
             get
