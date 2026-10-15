@@ -11,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93f9f5e4cf687ba43ac0c145e72e0931, type: 3}
   m_Name: 01_kei_ko.motionSyncLink
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Live2D.CubismMotionSyncPlugin::Live2D.CubismMotionSyncPlugin.Framework.Motion.CubismMotionSyncLinkData
   MotionPath: motions/01_kei_ko.motion3.json
-  MotionInstanceId: 45614
+  MotionInstanceId: 44802
   MotionSyncSettingId: Vowels_CRI
   audioClip: {fileID: 8300000, guid: 11c3cfce25e6acd49b5cb88d25f393d9, type: 3}

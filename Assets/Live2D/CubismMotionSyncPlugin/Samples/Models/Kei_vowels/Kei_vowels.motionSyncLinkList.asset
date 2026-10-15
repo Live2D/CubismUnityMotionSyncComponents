@@ -11,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48e110e88a8960d498431b2e91cd546d, type: 3}
   m_Name: Kei_vowels.motionSyncLinkList
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Live2D.CubismMotionSyncPlugin::Live2D.CubismMotionSyncPlugin.Framework.Motion.CubismMotionSyncLinkList
   CubismMotionSyncLinkObjects:
-  - {fileID: 11400000, guid: 476957443b97b8644aacf15758214cb0, type: 2}
-  - {fileID: 11400000, guid: 95bbbdf732d8ee2408f5d67ccaf56914, type: 2}
-  - {fileID: 11400000, guid: 67768e4b728551b44a0b34a1c4b478df, type: 2}
-  - {fileID: 11400000, guid: 73135169ae5c0b54f9936ab8fa010e31, type: 2}
+  - {fileID: 11400000, guid: df93416dc3c74a94db206269aafa82e8, type: 2}
+  - {fileID: 11400000, guid: 423f22420abed5840b017d47a115f27b, type: 2}
+  - {fileID: 11400000, guid: 34c1029dc8b677d45a927c8ff329958d, type: 2}
+  - {fileID: 11400000, guid: b639b6f505e8b904ead2a77afc06f6b0, type: 2}
