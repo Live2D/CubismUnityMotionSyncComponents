@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [5-r.3] - 2026-10-15
+
+### Added
+
+* Add URP assets and configurations for sample scenes to fully support Cubism SDK for Unity R5 (URP edition).
+
+### Changed
+
+* Upgrade the project environment to Unity 6 and `Cubism 5 SDK for Unity R5`.
+* Migrate all sample scenes (`Microphone`, `MotionSync`, `MotionSyncForWebGL`) to the `Input System`.
+
+
 ## [5-r.2.1] - 2026-08-25
 
 ### Changed
@@ -108,6 +120,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * New released!
 
 
+[5-r.3]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.2.1...5-r.3
 [5-r.2.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.2...5-r.2.1
 [5-r.2]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1...5-r.2
 [5-r.1]: https://github.com/Live2D/CubismUnityMotionSyncComponents/compare/5-r.1-beta.3...5-r.1
